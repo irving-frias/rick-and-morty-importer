@@ -2,6 +2,7 @@
     "name": "ifrias/rick_and_morty",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/irving-frias/rick-and-morty-importer",
     "autoload": {
         "psr-4": {
             "Ifrias\\RickAndMorty\\": "src/"
