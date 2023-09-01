@@ -1,7 +1,14 @@
 {
-    "name": "ifrias/rick_and_morty",
+    "name": "drupal/rick_and_morty",
     "type": "drupal-module",
-    "license": "MIT",
+    "license": "GPL-2.0-or-later",
+    "keywords": [
+        "Drupal",
+        "Rick And Morty",
+        "Api",
+        "Content",
+        "Drush commands"
+      ],
     "homepage": "https://github.com/irving-frias/rick-and-morty-importer",
     "autoload": {
         "psr-4": {
