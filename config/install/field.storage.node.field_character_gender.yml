@@ -1,0 +1,20 @@
+uuid: 12c981ed-019b-4f8d-8595-4f55f3800285
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_character_gender
+field_name: field_character_gender
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

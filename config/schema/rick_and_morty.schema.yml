@@ -1,0 +1,8 @@
+# Schema for the configuration files of the Rick and Morty module.
+rick_and_morty.settings:
+  type: config_object
+  label: 'Rick and Morty settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

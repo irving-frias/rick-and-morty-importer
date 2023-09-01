@@ -1,0 +1,13 @@
+uuid: e6f3b474-68a6-4baa-b5ea-f352945e0ca5
+langcode: en
+status: true
+dependencies: {  }
+id: character
+label: Character
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

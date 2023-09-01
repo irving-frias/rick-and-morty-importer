@@ -1,0 +1,11 @@
+uuid: 7f5bf1fa-3e66-4472-97b5-874ef83c2cb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.character_gender
+id: taxonomy_term.character_gender
+target_entity_type_id: taxonomy_term
+target_bundle: character_gender
+default_langcode: site_default
+language_alterable: false

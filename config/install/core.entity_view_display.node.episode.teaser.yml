@@ -1,0 +1,34 @@
+uuid: 9a545d29-0fe0-4402-9e8a-66f14363bfe8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.episode.field_episode_air_date
+    - field.field.node.episode.field_episode_characters
+    - field.field.node.episode.field_episode_created
+    - field.field.node.episode.field_episode_episode
+    - field.field.node.episode.field_episode_id
+    - field.field.node.episode.field_episode_name
+    - node.type.episode
+  module:
+    - user
+id: node.episode.teaser
+targetEntityType: node
+bundle: episode
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_episode_air_date: true
+  field_episode_characters: true
+  field_episode_created: true
+  field_episode_episode: true
+  field_episode_id: true
+  field_episode_name: true
+  langcode: true
+  search_api_excerpt: true

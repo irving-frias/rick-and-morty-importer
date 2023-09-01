@@ -1,0 +1,93 @@
+uuid: 5b3de0ad-fad6-48f6-96ac-4290c05c8875
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.character.field_character_created
+    - field.field.node.character.field_character_gender
+    - field.field.node.character.field_character_id
+    - field.field.node.character.field_character_image
+    - field.field.node.character.field_character_location
+    - field.field.node.character.field_character_name
+    - field.field.node.character.field_character_species
+    - field.field.node.character.field_character_status
+    - field.field.node.character.field_character_type
+    - node.type.character
+  module:
+    - datetime
+    - user
+id: node.character.search_index
+targetEntityType: node
+bundle: character
+mode: search_index
+content:
+  field_character_created:
+    type: datetime_plain
+    label: hidden
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_character_gender:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_character_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_character_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_character_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_character_species:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_character_status:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_character_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  field_character_location: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

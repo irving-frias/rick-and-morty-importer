@@ -1,0 +1,21 @@
+uuid: 86e35954-a4bc-4477-a635-d6b03ea0bba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_created
+    - node.type.episode
+  module:
+    - datetime
+id: node.episode.field_episode_created
+field_name: field_episode_created
+entity_type: node
+bundle: episode
+label: Created
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

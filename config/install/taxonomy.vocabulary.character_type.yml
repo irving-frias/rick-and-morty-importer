@@ -1,0 +1,8 @@
+uuid: 4425b622-3722-4049-92db-b4ac434d5183
+langcode: en
+status: true
+dependencies: {  }
+name: 'Character Type'
+vid: character_type
+description: ''
+weight: 0

@@ -1,0 +1,21 @@
+uuid: df15360f-ec33-46c2-ad28-adc68c9d911b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_character_created
+    - node.type.character
+  module:
+    - datetime
+id: node.character.field_character_created
+field_name: field_character_created
+entity_type: node
+bundle: character
+label: Created
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

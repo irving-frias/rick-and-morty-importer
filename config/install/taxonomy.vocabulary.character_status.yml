@@ -1,0 +1,8 @@
+uuid: 0940ec5f-6e31-4dc6-b0f1-eb3ce518d061
+langcode: en
+status: true
+dependencies: {  }
+name: 'Character Status'
+vid: character_status
+description: ''
+weight: 0

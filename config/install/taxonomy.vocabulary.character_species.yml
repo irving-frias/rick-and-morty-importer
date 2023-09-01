@@ -1,0 +1,8 @@
+uuid: 0005c75f-a706-4eab-a1bb-0bd79da9eb95
+langcode: en
+status: true
+dependencies: {  }
+name: 'Character Species'
+vid: character_species
+description: ''
+weight: 0

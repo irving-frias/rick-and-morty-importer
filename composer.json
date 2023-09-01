@@ -1,0 +1,20 @@
+{
+    "name": "ifrias/rick_and_morty",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ifrias\\RickAndMorty\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "irving-frias",
+            "email": "irvingfrias41@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "drupal/core": "^10.0"
+    }
+}

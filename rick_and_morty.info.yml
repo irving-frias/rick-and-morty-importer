@@ -1,0 +1,5 @@
+name: 'Rick and Morty'
+type: module
+description: 'Module create contet type and get all content from rick and morty api.'
+package: Custom
+core_version_requirement: ^10

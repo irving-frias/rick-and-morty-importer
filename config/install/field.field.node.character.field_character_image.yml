@@ -1,0 +1,29 @@
+uuid: 5fb6ac81-dfed-4f7f-ad21-63cf6983bb9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_character_image
+    - media.type.character
+    - node.type.character
+id: node.character.field_character_image
+field_name: field_character_image
+entity_type: node
+bundle: character
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      character: character
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

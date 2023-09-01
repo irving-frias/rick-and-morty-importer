@@ -1,0 +1,5 @@
+rick_and_morty.settings:
+  title: Rick and Morty Settings
+  description: Rick and morty settings.
+  route_name: rick_and_morty.settings
+  weight: 10

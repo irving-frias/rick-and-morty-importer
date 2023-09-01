@@ -1,0 +1,20 @@
+uuid: e8df2875-5ccd-457e-b586-386b5d8cf540
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_episode_air_date
+field_name: field_episode_air_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

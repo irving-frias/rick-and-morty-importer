@@ -1,0 +1,29 @@
+uuid: cf01d295-80ee-4df3-9706-db6c8a2e483e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_character_location
+    - node.type.character
+    - node.type.location
+id: node.character.field_character_location
+field_name: field_character_location
+entity_type: node
+bundle: character
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      location: location
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

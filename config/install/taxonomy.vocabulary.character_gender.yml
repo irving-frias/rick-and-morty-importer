@@ -1,0 +1,8 @@
+uuid: fe1cf693-aecb-4fd2-a09c-fe313d7742ee
+langcode: en
+status: true
+dependencies: {  }
+name: 'Character Gender'
+vid: character_gender
+description: ''
+weight: 0
