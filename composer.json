@@ -1,6 +1,6 @@
 {
     "name": "ifrias/rick_and_morty",
-    "type": "library",
+    "type": "drupal-module",
     "license": "MIT",
     "homepage": "https://github.com/irving-frias/rick-and-morty-importer",
     "autoload": {
