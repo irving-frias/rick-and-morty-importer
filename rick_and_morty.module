@@ -37,6 +37,41 @@ function rick_and_morty_taxonomy_load_by_name($term_name, $vocabulary) {
   }
 }
 
+function rick_and_morty_node_load_by_name($name) {
+  $nodes = \Drupal::entityQuery('node')
+    ->accessCheck(FALSE)
+    ->condition('type', $name, 'IN')
+    ->execute();
+
+  return count($nodes) ?? 0;
+}
+
+function rick_and_morty_get_total_pages(string $endpoint): int {
+  $response = \Drupal::httpClient()->get($endpoint);
+  if ($response->getStatusCode() != 200) {
+      return 0;
+  }
+
+  $body = $response->getBody();
+  $jsonString = $body->getContents(); // Convert the stream to a string.
+  $data = json_decode($jsonString, TRUE);
+
+  return $data['info']['pages'];
+}
+
+function rick_and_morty_get_total_items(string $endpoint): int {
+  $response = \Drupal::httpClient()->get($endpoint);
+  if ($response->getStatusCode() != 200) {
+      return 0;
+  }
+
+  $body = $response->getBody();
+  $jsonString = $body->getContents(); // Convert the stream to a string.
+  $data = json_decode($jsonString, TRUE);
+
+  return $data['info']['count'];
+}
+
 function import_characters_data($data, &$context){
   $message = 'Importing all characters ...';
   $results = array();
@@ -71,7 +106,7 @@ function create_or_update_characters_node($data): Node {
   $nids = \Drupal::entityQuery('node')
     ->accessCheck(FALSE)
     ->condition('type', 'character', 'IN')
-    ->condition('field_character_id', $data['id'], 'IN')
+    ->condition('field_character_name', $data['name'], 'IN')
     ->execute();
 
   $location = $data['location']['url'];
@@ -136,7 +171,7 @@ function create_or_update_locations_node($data): Node {
   $nids = \Drupal::entityQuery('node')
     ->accessCheck(FALSE)
     ->condition('type', 'location', 'IN')
-    ->condition('field_location_id', $data['id'], 'IN')
+    ->condition('field_location_name', $data['name'], 'IN')
     ->execute();
   $urls = $data['residents'];
   if (!empty($urls)) {
@@ -196,7 +231,7 @@ function create_or_update_episodes_node($data): Node {
   $nids = \Drupal::entityQuery('node')
   ->accessCheck(FALSE)
   ->condition('type', 'episode', 'IN')
-  ->condition('field_episode_id', $data['id'], 'IN')
+  ->condition('field_episode_name', $data['name'], 'IN')
   ->execute();
 
   $urls = $data['characters'];

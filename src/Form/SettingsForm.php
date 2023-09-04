@@ -44,7 +44,7 @@ final class SettingsForm extends ConfigFormBase {
       '#attributes' => ['readonly' => 'readonly'],
     ];
 
-    $totalPages = $this->getTotalPages($endpoint . $character_endpoint);
+    $totalPages = rick_and_morty_get_total_pages($endpoint . $character_endpoint);
 
     $form['api_url_characters_total_pages'] = [
       '#type' => 'textfield',
@@ -61,7 +61,7 @@ final class SettingsForm extends ConfigFormBase {
       '#attributes' => ['readonly' => 'readonly'],
     ];
 
-    $totalPages = $this->getTotalPages($endpoint . $location_endpoint);
+    $totalPages = rick_and_morty_get_total_pages($endpoint . $location_endpoint);
 
     $form['api_url_locations_total_pages'] = [
       '#type' => 'textfield',
@@ -78,7 +78,7 @@ final class SettingsForm extends ConfigFormBase {
       '#attributes' => ['readonly' => 'readonly'],
     ];
 
-    $totalPages = $this->getTotalPages($endpoint . $episodes_endpoint);
+    $totalPages = rick_and_morty_get_total_pages($endpoint . $episodes_endpoint);
 
     $form['api_url_episodes_total_pages'] = [
       '#type' => 'textfield',
@@ -141,16 +141,4 @@ final class SettingsForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
   }
 
-  private function getTotalPages(string $endpoint): int {
-    $response = \Drupal::httpClient()->get($endpoint);
-    if ($response->getStatusCode() != 200) {
-        return [];
-    }
-
-    $body = $response->getBody();
-    $jsonString = $body->getContents(); // Convert the stream to a string.
-    $data = json_decode($jsonString, TRUE);
-
-    return $data['info']['pages'];
-  }
 }

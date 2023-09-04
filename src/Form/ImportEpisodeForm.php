@@ -21,6 +21,16 @@ final class ImportEpisodeForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state): array {
+    $config = \Drupal::config('rick_and_morty.settings')->get();
+    $endpoint = $config['api_url'] . $config['api_url_episodes_endpoint'];
+    $indexed_count = rick_and_morty_node_load_by_name('episode');
+    $total_count = rick_and_morty_get_total_items($endpoint);
+
+    $form['index_progress'] = [
+      '#theme' => 'progress_bar',
+      '#percent' => $total_count ? (int) (100 * $indexed_count / $total_count) : 100,
+      '#message' => $this->t('@indexed/@total indexed', ['@indexed' => $indexed_count, '@total' => $total_count]),
+    ];
 
     $form['import_episode'] = array(
       '#type' => 'submit',
