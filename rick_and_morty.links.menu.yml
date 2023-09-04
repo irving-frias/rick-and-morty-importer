@@ -1,5 +1,34 @@
+rick_and_morty.admin_config:
+  title: 'Rick and Morty'
+  route_name: rick_and_morty.admin_config
+  parent: system.admin_config
+  description: 'Rick and Morty Configuration'
+  weight: -999
+
 rick_and_morty.settings:
   title: Rick and Morty Settings
   description: Rick and morty settings.
   route_name: rick_and_morty.settings
-  weight: 10
+  parent: rick_and_morty.admin_config
+  weight: 1
+
+rick_and_morty.import_character:
+  title: 'Character importer'
+  route_name: rick_and_morty.import_character
+  description: 'Import characters.'
+  parent: rick_and_morty.admin_config
+  weight: 2
+
+rick_and_morty.import_episode:
+  title: 'Episode importer'
+  route_name: rick_and_morty.import_episode
+  description: 'Import episodes.'
+  parent: rick_and_morty.admin_config
+  weight: 3
+
+rick_and_morty.import_location:
+  title: 'Location importer'
+  route_name: rick_and_morty.import_location
+  description: 'Import locations.'
+  parent: rick_and_morty.admin_config
+  weight: 4
