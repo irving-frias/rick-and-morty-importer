@@ -292,6 +292,7 @@ function create_or_update_episodes_node($data): Node {
       if (!empty($urls)) {
         $node->field_episode_characters = $characterIds;
       }
+
       return $node;
   }
 }
